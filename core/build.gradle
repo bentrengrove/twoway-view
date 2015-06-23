@@ -18,5 +18,3 @@ android {
         targetSdkVersion 21
     }
 }
-
-apply from: "${rootDir}/gradle/scripts/gradle-mvn-push.gradle"

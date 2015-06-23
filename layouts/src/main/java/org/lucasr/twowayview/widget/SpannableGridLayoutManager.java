@@ -147,7 +147,12 @@ public class SpannableGridLayoutManager extends GridLayoutManager {
     void getLaneForChild(LaneInfo outInfo, View child, Direction direction) {
         super.getLaneForChild(outInfo, child, direction);
         if (outInfo.isUndefined()) {
-            getLanes().findLane(outInfo, getLaneSpanForChild(child), direction);
+            LayoutParams params = (LayoutParams)child.getLayoutParams();
+            if (params.rowSpan == 2 && params.colSpan == 1) {
+                outInfo.set(2, 2);
+            } else {
+                getLanes().findLane(outInfo, getLaneSpanForChild(child), direction);
+            }
         }
     }
 

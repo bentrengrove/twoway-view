@@ -19,5 +19,3 @@ dependencies {
     compile project(':core')
     compile 'com.android.support:recyclerview-v7:21.0.0'
 }
-
-apply from: "${rootDir}/gradle/scripts/gradle-mvn-push.gradle"

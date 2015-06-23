@@ -262,6 +262,7 @@ class Lanes {
         outInfo.setUndefined();
 
         int targetEdge = (direction == Direction.END ? Integer.MAX_VALUE : Integer.MIN_VALUE);
+
         for (int l = 0; l < mLanes.length; l++) {
             final int laneEdge;
             if (mIsVertical) {
